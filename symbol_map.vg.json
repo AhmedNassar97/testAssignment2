@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background":"#40514F",
+    "width": 1900,
+    "height": 1000,
+    "title": "Global Deaths from Natural Disasters, 1900-2021 ",
+    "projection": {"type": "equalEarth"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "grey", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "data/SubsetC_Deaths.csv"
+        },
+        "mark": {"type": "circle", "opacity":0.6},
+        "encoding": {
+          "longitude": {"field": "long", "type": "quantitative"},
+          "latitude": {"field": "lat", "type": "quantitative"},
+          "size": {
+            "field": "Total_Deaths",
+            "type": "quantitative",
+            "scale":{
+              "domain":[10000,5000000],
+              "range":[200,2000]
+            
+            }
+          },
+          "color": {
+            "value":"red"
+          }
+        }
+      }
+    ],
+    "config": {
+        "legend": {
+          "labelFontSize": 20,
+          "titleFontSize": 20,
+          "labelColor":"white",
+          "titleColor":"white"
+        },
+        "title": {
+          "color":"white",
+          "fontSize": 30
+        }
+        }
+  }

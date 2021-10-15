@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Deaths by Common Types of Natural Disasters",
+  "background":"#40514F",
+  "width": 900,
+  "height": 700,
+  "data": { "url": "data/SubsetE_TypeDeaths.csv"
+  },
+  "transform": [
+    {"filter": "datum['Total_Fin_Damage'] > 0 && (datum['Disaster_Type'] == 'Drought'  || datum['Disaster_Type'] == 'Flood' || datum['Disaster_Type'] == 'Earthquake' || datum['Disaster_Type'] == 'Epidemic' || datum['Disaster_Type'] == 'Storm')"
+    }
+  ],
+  "encoding": {
+    "x": {"field": "Disaster_Type", "type": "nominal", "axis": {"labelAngle": 0,"grid": false, "labelColor":"white","titleColor":"white", "titleFontSize": 50, "titleFontStyle":"bold"}, "title":"Disaster Type"},
+    "y": {"field": "Total_Fin_Damage", "type": "quantitative", "axis":{"grid": false, "labelColor":"white", "titleColor":"white", "titleFontSize": 30, "titleFontStyle":"bold"},"title":"Financial Damage (millions)"},
+    "color": {"field": "Disaster_Type", "type": "nominal", "legend":null,
+      "scale": {
+        "scheme":"set2"
+  }}
+  },
+  "layer":[{
+  "mark": {"type": "bar"}
+    },
+    {
+      "mark":{"type": "text", "fill":"white","align":"center", "dy":-10, "fontWeight":"bold", "fontSize":20},
+      "encoding": {
+        "text":{"field":"Fin_value", "type": "nominal"}
+      }
+        }
+  ],
+  "config": {
+    "legend": {
+      "labelFontSize": 20,
+      "titleFontSize": 20,
+      "labelColor":"white",
+      "titleColor":"white"
+    },
+    "title": {
+      "color":"white",
+      "fontSize": 30
+    }
+    }
+  
+}

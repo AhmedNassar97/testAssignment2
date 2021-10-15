@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":"Natural Disasters across Continents",
+  "background":"#40514F",
+  "width": 700,
+  "height": 700,
+  "data": {
+    "url": "data/SubsetA_ContinentDis.csv"
+  },
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"}
+  },{
+    "mark": {"type": "text", "radiusOffset": 10, "fill":"white", "fontSize":30, "dy":-25},
+    "encoding": {
+      "text": {"field": "Total_Disasters", "type": "quantitative"}
+    }
+  }],
+  "encoding": {
+    "theta": {"field": "Total_Disasters", "type": "quantitative", "stack": true},
+    "radius": {"field": "Total_Disasters", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+    "color": {"field": "Continent", "type": "nominal", 
+      "scale": {
+        "scheme":"set2",
+      "domain":["Africa","Americas","Asia","Europe","Oceania"]
+  }},
+  "tooltip": [
+    {"field": "Continent", "type": "nominal"},
+    {"field": "Total_Disasters", "type": "quantitative", "title": "Total Disasters"}
+  ]
+  },
+  "config": {
+    "legend": {
+      "labelFontSize": 20,
+      "titleFontSize": 20,
+      "labelColor":"white",
+      "titleColor":"white"
+    },
+    "title": {
+      "color":"white",
+      "fontSize": 30
+    }
+    }
+  }

@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background":"#40514F",
+    "title": "Death vs CPI",
+    "data": {"url": "data/Natural_Disasters.csv"},
+    "transform": [{
+      "filter": {"and": [
+        {"field": "Total_Deaths", "lte": 50000}
+  
+      ]}
+    }],
+    "mark": {"type": "rect", "stroke":"blue", "strokeWidth":2},
+    "width": 700,
+    "height": 700,
+    "encoding": {
+      "x": {
+        "bin": {"maxbins":25},
+        "field": "Total_Deaths",
+        "type": "quantitative",
+        "axis":{"grid": true, "labelColor":"white","titleColor":"white", "titleFontSize": 50, "titleFontStyle":"bold", "title":"Total Deaths"}
+      },
+      "y": {
+        "bin": {"maxbins":30},
+        "field": "CPI",
+        "type": "quantitative",
+        "axis":{"grid": true,"labelColor":"white","titleColor":"white", "titleFontSize": 50, "titleFontStyle":"bold", "title":"CPI"}   
+      },
+      "color": {
+        "aggregate": "count",
+        "type": "quantitative",
+        "scale":{"scheme":"blues"}
+      }
+    },
+    "config": {
+        "legend": {
+          "labelFontSize": 20,
+          "titleFontSize": 20,
+          "labelColor":"white",
+          "titleColor":"white"
+        },
+        "title": {
+          "color":"white",
+          "fontSize": 30
+        }
+        }
+  }
+  

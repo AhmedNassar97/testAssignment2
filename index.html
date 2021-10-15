@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+<body bgcolor="#171D1C">
+    
+<!-- TITLE -->
+<h1 class="Header1"> Natural Disasters and Their Effects </h1>
+<hr color="#ED687F" style="color: wh;">
+<br>
+
+<!-- body 1 -->
+<p class= "Body">
+Intro to topic.........Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+</p>
+
+<!--First Visualizations-->
+<h2 class="Header2" > Occurrences of Natural Disasters </h2>
+
+<!--Radial Chart -->
+<table align="center">
+    <tr>
+        <td>
+            <div id="radial_chart"></div>
+        </td>
+    </tr>>
+
+
+</table>
+
+
+<br>
+<br>
+<br>
+<!--Map 1 -->
+
+<table align="center">
+    <tr>
+        <td><div id="choropleth_map"></div></td>
+    </tr>>
+</table>
+
+
+
+
+
+<!--Map 2+3 -->
+
+<!--Description of vis 1-->
+<p class= "Body">
+    Discuss about Section 1........ Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    </p>
+
+<!--Second Visualizations-->
+<h2 class="Header2" > The Effects of Natural Disasters </h2>
+
+<!--Map 1 -->
+<table align="center">
+    <tr>
+        <td><div id="symbol_map"></div></td>
+    </tr>>
+</table>
+<br>
+<!--Charts 1 and 2 -->
+<table align="center">
+    <tr>
+        <td>
+            <div id="bar_deaths"></div>
+            <div id="bar_finance"></div>
+        </td>
+    </tr>
+</table>
+
+<!--Description of vis 2-->
+<p class= "Body">
+    Discuss about Section 2......... Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    </p>
+
+<!--Thirds Visualizations-->
+<h2 class="Header2" > Observable Patterns</h2>
+
+<!--Charts 1 and 2 -->
+<table align="center">
+    <tr>
+        <td>
+            <div id="bubble_plot"></div>
+            <div id="heat_map"></div>
+            
+        </td>
+    </tr>
+</table>
+
+
+<!--Description of vis 3-->
+<p class= "Body">
+    Discuss about Section 3......... Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+    </p>
+
+    <br>
+    <hr color="#ED687F" style="color: wh;">
+    <br>
+    <br>
+<script type="text/javascript">
+
+  var v1 = "radial_chart.vg.json";
+    vegaEmbed('#radial_chart', v1).then(function(result) {
+    }).catch(console.error);
+
+  var v2 = "choropleth_map.vg.json";
+  vegaEmbed('#choropleth_map', v2).then(function(result) {
+  }).catch(console.error);
+
+  var v3 = "bar_deaths.vg.json";
+  vegaEmbed('#bar_deaths', v3).then(function(result) {
+  }).catch(console.error);
+
+  var v4 = "bar_finance.vg.json";
+  vegaEmbed('#bar_finance', v4).then(function(result) {
+  }).catch(console.error);
+
+  var v5 = "bubblePlot.vg.json";
+  vegaEmbed('#bubble_plot', v5).then(function(result) {
+  }).catch(console.error); 
+
+  var v6 = "heatmap.vg.json";
+  vegaEmbed('#heat_map', v6).then(function(result) {
+  }).catch(console.error);
+  
+  var v7 = "symbol_map.vg.json";
+  vegaEmbed('#symbol_map', v7).then(function(result) {
+  }).catch(console.error);
+
+</script>
+
+</body>
+</html>

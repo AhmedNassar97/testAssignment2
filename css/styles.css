@@ -1,0 +1,56 @@
+#choropleth_map {
+	color: #40514F;
+}
+
+#scatter_plot{
+	color: whitesmoke;
+	top:50px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+}
+
+#radial_chart{
+	color: #40514F;
+}
+
+#bar_deaths{
+	color: #40514F;
+}
+
+#bar_finance{
+	color: #40514F;
+}
+
+#bubble_plot{
+	color: #40514F;
+}
+
+#heat_map{
+	color: #40514F;
+}
+
+#symbol_map{
+	color: #40514F;
+}
+.chart_anno{
+	font-family: Verdana, Geneva, Tahoma, sans-serif; 
+	color: white; 
+	font-size: 30px; 
+	text-align: center;
+	font-style: italic;
+}
+
+.Header1{
+	font-family: Verdana, Geneva, Tahoma, sans-serif ;font-size: 90px; color: #ED4B57; text-align:center; font-weight: bold
+}
+
+.Header2{
+	font-family: Verdana, Geneva, Tahoma, sans-serif ; font-size: 65px; color: #D74551; text-align:center; font-weight: bold;
+}
+
+.Body{
+	font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 30px; color: whitesmoke; text-align:center;
+	padding-right: 5%;
+	padding-left: 5%;
+}

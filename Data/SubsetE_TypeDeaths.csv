@@ -1,0 +1,14 @@
+﻿Disaster_Type,Total_Deaths,Total_Fin_Damage,Fin_value,Death_value
+Animal accident,12,,,
+Drought,11731424,10127137,$10 million,12 million
+Earthquake,2339737,826816460,$800 million,2 million
+Epidemic,9613560,913632188,$900 million,9 million
+Extreme temperature,192793,52719484,,
+Flood,6991615,847830019,$850 million,7 million
+Fog,4000,,,
+Glacial lake outburst,234,,,
+Landslide,66926,10302368,,
+Mass movement (dry),4644,209000,,
+Storm,1400234,1499195042,$1.5 billion,1.5 million
+Volcanic activity,86802,3207488,,
+Wildfire,4435,104099961,,
